@@ -1,14 +1,15 @@
 const names = ['Noah', 'Liam', 'Mason', 'Jacob', 'Robot', 'William', 'Ethan', 'Michael', 'Alexander'];
 
-const addPrefix = () => {
+const addPrefix = (a, b) => {
   let newNames = [];
   for (let i = 0; i < names.length; i++) {
     if (names[i] === 'Robot') {
-      newNames[i] = 'Mr.' + ' ' + names[i];
+      newNames[i] = b + '.' + ' ' + names[i];
     } else {
-      newNames[i] = 'Mr ' + names[i];
+      newNames[i] = b + ' ' + names[i];
     }
   }
-  return newNames
+  console.log(newNames);
 }
-console.log(addPrefix());
+
+addPrefix(names, 'Mr');
